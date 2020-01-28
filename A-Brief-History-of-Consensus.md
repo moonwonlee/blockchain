@@ -4,7 +4,7 @@ Moonwon Lee @ berkeley.edu
 
 
 
-### 1. Purpose of This Note
+## 1. Purpose of This Note
 1. Background : I got an internship in a blockchain company during my winter vacation, and I started studying blockchain, I had zero knowledge of it before. I had no enough time to get prepared, so I just read through everything on google in random order. It was like jumping around, filling the gap of my knowledge. As I read more and more, I got more questions about this field. It felt like an endless loop (especially PoS, Paxos, Correctness of consensus, and Implementation of blockchain and smart contract). Then, I understood that Blockchain is an evolving field, therefore it was far from being perfect unlike different fields I studied at school (I’m math major). The origin of blockchain was very clear : Everyone can see everything that are shared by everyone. However, as people are trying to do more things with this hyped blockchain, the pure idea have been transformed into ugly and less clear shape. Now, the blockchain is not open to everyone and the blockchain is not as simple as its name is. [It’s way more than a block and a chain.](https://hyperledger-fabric.readthedocs.io/en/release-1.4/network/network.html) Finally I have realized that why blockchain is so confusing: the ideal of blockchain is keep colliding with its realization. In the process, I copy-pasted the sentences that really helped me to understand in this doc. 
 2. About this Doc.
     1. This is a very personal note consisting of sentences that I collected for myself. That is why everything in this doc is indexed. 
@@ -27,9 +27,9 @@ Moonwon Lee @ berkeley.edu
             1. Secure Hash Algorithms
             2. Pseudorandom
             3. Merkle Tree
-### 2. Similar to what I want to accomplish in this note : 
+## 2. Similar to what I want to accomplish in this note : 
 [A brief history of Consensus, 2PC and Transaction Commit.](http://betathoughts.blogspot.com/2007/06/brief-history-of-consensus-2pc-and.html)
-### 3. Main Players in Chronological Order
+## 3. Main Players in Chronological Order
 1. [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport)
     1. [Turing Award](https://en.wikipedia.org/wiki/Turing_Award) Recipient in Distributed Computing, 2013
         1. Consensus in [Distributed Network](https://en.wikipedia.org/wiki/Distributed_networking)
@@ -47,7 +47,7 @@ Moonwon Lee @ berkeley.edu
 7. [Nexledger by Samsung](http://www.theinvestor.co.kr/view.php?ud=20170406000977), 2016
 8. [Libra by Facebook](https://libra.org/en-US/white-paper/), June, 2019 \
 
-### 4. Bigbang of Blockchain: [Proof of Work](https://blog.goodaudience.com/how-a-miner-adds-transactions-to-the-blockchain-in-seven-steps-856053271476?)
+## 4. Bigbang of Blockchain: [Proof of Work](https://blog.goodaudience.com/how-a-miner-adds-transactions-to-the-blockchain-in-seven-steps-856053271476?)
 1. Blockchain: 
     1. Core to the blockchain is the model of the ledger, an unalterable, append-only log of the transactions that take place across various entities. To maintain the integrity of the ledger, the various entities need a way to “agree” or to reach consensus on which set of incremental transactions (or blocks) are to be appended to the ledger [1].
     2. Widely known as the core technology underpinning the digital currency, blockchain refers to a ledger that maintains a continuously expanding list of data records or transactions from different parties [2].
@@ -70,7 +70,7 @@ Moonwon Lee @ berkeley.edu
     2. Q : What if first miner just wrote down wrong things(transactions) in its block and just did the mining and found the proper bounce?
         1. A : When a miner finds a solution, it will be broadcasted (along with their block) to the other miners and they will only verify it if all transactions inside the block are valid according to the existing record of transactions on the blockchain. Note that even a corrupted miner can never create a transaction for someone else because they would need the digital signature of that person in order to do that (their private key). Sending Bitcoin from someone else’s account is therefore simply impossible without access to the corresponding private key [3].
     3. PoW is kind of perfect….compared to other shits.
-### 5. [Proof of Stake](https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQ)
+## 5. [Proof of Stake](https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQ)
 1. Good thing : 
     1. No more waste of energy. Supposed to be better than PoW for sure!...
     2. Sharding(horizontally, not vertically) : core idea in DB, Distributed Computing, Asynchronous shit. PoW cannot do this becauses of its nature. But PoS can do it. wait, BFT can do it…
@@ -100,7 +100,7 @@ Moonwon Lee @ berkeley.edu
         1. ETH 2.0 ([Casper](https://blockgeeks.com/guides/ethereum-casper/))
         2. Tendermint
         3. peercoin
-### 6. Two Assumptions for Distributed Computing, Consensus
+## 6. Two Assumptions for Distributed Computing, Consensus
 1. Condition 1 : Synchronous
     1. Definition :
         1. In asynchronous systems, there is no upper bound on the amount of time components (nodes, generals) may take to receive, process and respond to messages
@@ -119,7 +119,7 @@ Moonwon Lee @ berkeley.edu
         9. The name was changed, eventually settling on "[Byzantine](https://en.wikipedia.org/wiki/Byzantine_Empire)", at the suggestion of Jack Goldberg to future-proof any potential offense giving in [The Byzantine Generals Problem](http://lamport.azurewebsites.net/pubs/byz.pdf) [5]
         10. This formulation of the problem, together with some additional results, were presented by the same authors in their 1982 paper. [5]
         11. BFT in Korean : [Consensus over Byzantine Fault (1) - The Problem](https://suckzoo.github.io/tech/2018/02/06/bft-1.html)
-### 7. Mathematical Grounds for Distributed Computing, Consensus
+## 7. Mathematical Grounds for Distributed Computing, Consensus
 1. New Era about to begin with the development of Mathematics
 2. Blockchain is one kind of Distributed Computing
 3. [Correctness of Distributed Computing](https://medium.com/@ancapalex/a-cursory-introduction-to-byzantine-fault-tolerance-and-alternative-consensus-1155a5594f18)
@@ -146,13 +146,13 @@ Moonwon Lee @ berkeley.edu
     3. Def : Partition tolerance = is a guarantee that the system will still operate in the face of a network partition, across which some messages between nodes cannot be delivered (fault tolerance) [4].
 6. [FLP and CAP aren't the same thing](https://www.the-paper-trail.org/post/2012-03-25-flp-and-cap-arent-the-same-thing/)
 7. Remark : FLP < CAP < BFT = By CAP Theorem, fault tolerant (partitioned network) consensus (availability and consistency) is unachievable in asynchronous systems. By FLP impossibility, fault tolerant (single fault) consensus (termination and agreement) is unachievable in asynchronous systems.FLP-admissible systems need only one faulty node, and messages can be delayed but not dropped (there is no network partition). CAP Theorem, thus, appears to be a particular instance of FLP impossibility [4].
-### 8. New Era About to Begin...Because 
+## 8. New Era About to Begin...Because 
 1. Proof of Work Sucks : 
     1. Environment Concerns : [Is Bitcoin a Waste of Electricity, or Something Worse?](https://www.nytimes.com/2018/02/28/business/economy/bitcoin-electricity-productivity.html)
     2. Banking Systems: 
         1. The idea of implementing a byzantine fault tolerance (BFT) consensus came from the challenges we faced while building blockchain solutions for banks. We chose ethereum as the baseline protocol mostly because of its smart contract capability. However, the built-in consensus, proof of work or ethash, is not the ideal choice when settlement finality and minimum latency is required [8].
         2. Tend to form a private chain or consortium chain to run their applications. [PBFT](http://pmg.csail.mit.edu/papers/osdi99.pdf) is ideal for these settings. These environments require a higher degree of manageability and higher throughput. In terms of scalability, validator scalability is not required. Many of the decentralization benefits of PoW in public chains become drawbacks in a private/consortium chain. On the other hand, designated validators in a PBFT environment maps well to private/consortium chains.[Istanbul Byzantine Fault Tolerance · Issue #650 · ethereum/EIPs](https://github.com/ethereum/EIPs/issues/650) [8].
-### 9. Brave New World = Permissioned (Private) VS Permissionless (Public)
+## 9. Brave New World = Permissioned (Private) VS Permissionless (Public)
 1. Permissionless (Public) blockchain
     1. Proof of Work consensus
     2. Proof of Stake : is there a blockchain only using proof of stake?
@@ -184,7 +184,7 @@ Moonwon Lee @ berkeley.edu
             3. Closed membership: Raft does not support open-enrollment, but nodes can be added and removed by an administrator
             4. Fully peered: All nodes must be peered with all other nodes
             5. Crash fault tolerant: Raft does not provide Byzantine fault tolerance, only crash fault tolerance
-### 10. Byzantine Fault Tolerance 
+## 10. Byzantine Fault Tolerance 
 1. BFT Consensus in a Synchronous network for Safety and a Synchronous network for Liveness
     1. The FLP Impossibility works if network is asynchronous
     2. So if we assume our network is synchronous, we are free from the FLP Impossibility, and get both safety and liveness easily.
@@ -213,7 +213,7 @@ Moonwon Lee @ berkeley.edu
             1. [Is Stellar As Secure As You Think](https://sites.google.com/view/stellar-analysis)
             2. [Safety vs. Liveness in the Stellar Network](http://www.scs.stanford.edu/~dm/blog/safety-vs-liveness.html)
         2. The FLP result does not state that consensus can never be reached: merely that under the model's assumptions, no algorithm can always reach consensus in bounded time. In practice it is highly unlikely to occur [9].
-### 11. [PBFT](http://pmg.csail.mit.edu/papers/osdi99.pdf)
+## 11. [PBFT](http://pmg.csail.mit.edu/papers/osdi99.pdf)
 1. [Practical Byzantine Fault Tolerance](http://pmg.csail.mit.edu/papers/osdi99.pdf) by Miguel Castro and Barbara Liskov at MIT
 2. Asynchronous(safety) + Synchronous(liveness, to be beat the FLP Impossibility)
 3. Proved by the same team : [A Correctness Proof for a Practical Byzantine-Fault-Tolerant Replication Algorithm](https://cs.nyu.edu/courses/fall18/CSCI-GA.3033-002/papers/pbft-proof.pdf).
@@ -256,18 +256,18 @@ Moonwon Lee @ berkeley.edu
     1. PBFT also requires a large number of consensus-specific messages; the general PBFT algorithm requires five per published block, and this implementation requires three (because it does not directly interact with clients  [10]
     2. Additionally, PBFT does not prevent nodes from "leaking" information to bad actors [10]
     3. Perhaps the most significant drawback of this algorithm stems from a lack of information provided by the Consensus API. In order to be truly Byzantine fault tolerant, PBFT must have access to the ordering of batches inside of the block, not just the blocks themselves. Currently, the Consensus API does not provide any visibility about batches inside the blocks, so it can't be confirmed that all blocks indeed have the same batch list ordering. One possible solution to this would be to package the batch list inside the block. It is possible that the whole batch list is not necessary, perhaps a hash of it would be sufficient to ensure ordering of batches inside blocks provided by the Consensus API [10]
-### 12. Ethereum 2.0
+## 12. Ethereum 2.0
 1. Ethereum 1.0 = PoW
 2. [Ethereum 2.0](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) = PoS + BFT = Casper
-### 13. [Hyperledger Fabric](https://hyperledger-fabric.readthedocs.io/en/release-1.4/network/network.html)
+## 13. [Hyperledger Fabric](https://hyperledger-fabric.readthedocs.io/en/release-1.4/network/network.html)
 1. Permissioned blockchain
 2. The Linux Foundation + IBM (+Intel, Samsung, ICONLOOP)
-### 14. Nexledger by Samsung
-### 15. [Libra by Facebook](https://libra.org/en-US/white-paper/)
+## 14. Nexledger by Samsung
+## 15. [Libra by Facebook](https://libra.org/en-US/white-paper/)
 1. based on [HotStuff: BFT Consensus in the Lens of Blockchain](https://arxiv.org/abs/1803.05069)
 
 
-### References		
+## References		
 [1] Erik Zhang, [“Exploring Blockchain Consensus”,](https://docs.microsoft.com/en-us/archive/msdn-magazine/2019/october/blockchain-exploring-blockchain-consensus) 2019.
 
 [2] Sohn Ji-young, [“Samsung SDS introduces new blockchain platform Nexledger”](http://www.theinvestor.co.kr/view.php?ud=20170406000977), 2017.
