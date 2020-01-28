@@ -18,7 +18,7 @@ Moonwon Lee @ berkeley.edu
       1.Some knowledge of Cryptography is required to fully understand Blockchain.
         Recommend following readings
         1. The first chapter of [Handbook of Applied Cryptography](http://cacr.uwaterloo.ca/hac/).  It took about 8 hours
-                My note: [A Brief Summary of Cryptography for Blockchain](https://docs.google.com/document/d/1IUGXtIyu55TYunM0_g3b99HzDN1ehv_lFeM3hJTBjvo/edit#heading=h.ywu36ukcepfm)
+            1. [A Brief Summary of Cryptography for Blockchain](https://docs.google.com/document/d/1IUGXtIyu55TYunM0_g3b99HzDN1ehv_lFeM3hJTBjvo/edit#heading=h.ywu36ukcepfm) by Moonwon Lee @ berkeley.edu
         2. UC Berkeley, CS70 Summer 2019, [Public Key Cryptography Note 7](https://www.su19.eecs70.org/static/notes/n7.pdf) 
         3. UC Berkeley, CS70 Spring 2017, [Bijactions and RSA Note 7](http://sp17.eecs70.org/static/notes/n7.pdf).
         4. And some more on [Elliptic Curve Cryptography](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography)
@@ -259,6 +259,7 @@ Moonwon Lee @ berkeley.edu
 ## 12. Ethereum 2.0
 1. Ethereum 1.0 = PoW
 2. [Ethereum 2.0](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) = PoS + BFT = Casper
+3. [A Brief Summary of Ethereum 2.0 Yellow Paper](https://docs.google.com/document/d/1yE5Uuw5gxkoFD4y86qVjk18uk5QkHjwpciZTpRm-f0c/edit#) by Moonwon Lee @ berkeley.edu
 ## 13. [Hyperledger Fabric](https://hyperledger-fabric.readthedocs.io/en/release-1.4/network/network.html)
 1. Permissioned blockchain
 2. The Linux Foundation + IBM (+Intel, Samsung, ICONLOOP)
