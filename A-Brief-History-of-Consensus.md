@@ -242,6 +242,16 @@ Moonwon Lee @ berkeley.edu
     2. in Korean : 
         1. [Consensus over Byzantine Fault (2) - PBFT(1)](https://suckzoo.github.io/tech/2018/02/19/bft-2.html)
         2. [Consensus over Byzantine Fault (3) - PBFT(2)](https://suckzoo.github.io/tech/2018/02/22/bft-3.html)
+7. Message-types :
+* <REQUEST, o, t, c>σ<sub>c<sub>
+* <REPLY, v, t, c, i ,r>σ<sub>i<sub>
+* <<PRE-PREPARE, v, n, d>p, m>
+* <PREPARE, v, n, d, i>σ<sub>i<sub>
+* <COMMIT, v, n, D(m), i>σ<sub>i<sub>
+* <CHECKPOINT, n, d, i>σ<sub>i<sub>
+* <VIEW-CHANGE, v + 1, n, C, P, i>σ<sub>i<sub>
+* <NEW-VIEW, v + 1, V, O>σ<sub>p<sub>
+
 8. The [RFC(Request for CommentsS) describing a practical Byzantine fault tolerant (PBFT) consensus algorithm for Hyperledger Sawtooth](https://github.com/hyperledger/sawtooth-rfcs/blob/master/text/0019-pbft-consensus.md)
     1. The PBFT algorithm is also inherently [crash fault tolerant](https://stackoverflow.com/questions/56336229/byzantine-fault-tolerance-bft-and-crash-fault-tolerance-cft). 
     2. Another advantage of PBFT is that blocks committed by nodes are final, so there are no forks in the network (unlike PoS’s Nothing at Stake Problem). This is verified by a "Consensus Seal," which is appended to blocks when they are finalized and checked upon receipt of a new block. The Seal consists of votes(signatures) of validators of the block [10].
