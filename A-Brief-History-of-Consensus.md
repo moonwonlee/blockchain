@@ -45,7 +45,7 @@ Moonwon Lee @ berkeley.edu
 5. [Ethereum](https://en.wikipedia.org/wiki/Ethereum), 2015
 6. [Hyperledger](https://en.wikipedia.org/wiki/Hyperledger) by the Linux Foundation + IBM, 2015
 7. [Nexledger by Samsung](http://www.theinvestor.co.kr/view.php?ud=20170406000977), 2016
-8. [Libra by Facebook](https://libra.org/en-US/white-paper/), June, 2019 \
+8. [Libra by Facebook](https://libra.org/en-US/white-paper/), June, 2019
 
 ## 4. Bigbang of Blockchain: [Proof of Work](https://blog.goodaudience.com/how-a-miner-adds-transactions-to-the-blockchain-in-seven-steps-856053271476?)
 1. Blockchain: 
